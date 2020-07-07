@@ -1,0 +1,182 @@
+\documentclass[10pt,a4paper,roman]{moderncv}
+\moderncvstyle{banking}                        
+\moderncvcolor{blue}                             
+\nopagenumbers{}                                 
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{tabto}
+
+
+\usepackage[scale=0.9]{geometry}
+\usepackage{multicol}
+
+
+\usepackage{import}
+
+
+\name{Pierre-Stéphane}{Voltaire}
+
+\address{Oakville Ontario}{}{} 
+  
+\newcommand*{\customcventry}[7][.15em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.15em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{10pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+\vspace*{-20mm}
+\begin{center}
+\begin{tabular}{ c c c c }
+ \faLinkedin\enspace \href{https://www.linkedin.com/in/pierre-st\%C3\%A9phane-voltaire}{P.S.Voltaire} & \faEnvelopeO\enspace psvoltaire96@gmail.com & \faGithub\enspace \href{https://github.com/PierreStephaneVoltaire}{PierreStephaneVoltaire} & \faMobile\enspace 905 616 0236\\  
+\end{tabular}
+\end{center}
+
+\section{SUMMARY}
+\vspace*{-1mm}
+
+{\begin{itemize}
+\item Recent graduate at Sheridan College
+\item Has a wide range of technical expertise and able to adapt to changing requirements and willing to learn new technologies to improve skills developed in class
+
+\end{itemize}
+\vspace*{-2.5mm}
+
+\section{SKILLS}
+\vspace*{-5mm}
+
+   \begin{multicols}{2}
+    \begin{itemize}
+      \item \textbf{MARKUP LANGUAGES}: HTML, XML 
+      \item \textbf{PROGRAMMING LANGUAGES}: Java,\newline C\#, TypeScript, JavaScript, Kotlin, Python, Rust
+      \item \textbf{FRAMEWORKS/LIBRARY}: Spring, Flask,\newline ASP.NET Core, Actix, VueJs, jQuery, Angular, ReactJs
+
+    \item \textbf{MOBILE PLATFORMS \& framework}: Android, Nativescript, Ionic
+                     \item \textbf{VCS Tools \& SERVICES}: GitLab, GitHub, Git
+      \item \textbf{DATABASES \& SERVICES}: Couchbase,\newline FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch
+                       \item \textbf{CLOUD SERVICES}: AWS, Google Cloud Platform
+                       \item \textbf{AUTOMATION/BUILD TOOLS}: Docker, GitHub Actions, Docker-Compose, Gradle, Terraform
+
+    \end{itemize}
+    \end{multicols}m
+\vspace*{-7mm}
+
+\section{EDUCATION}
+\vspace*{-1mm}
+
+{\customcventry{Sep 2016 - Apr 2020}{Sheridan College}{Bachelor of Computer Science-Mobile Computing}{Oakville, ON}{}{}}
+
+{\customcventry{Sep 2014 – Aug 2016}{Sheridan College}{Computer Systems Technician – Software Engineering, Diploma}{Oakville, ON}{}{}}
+\vspace*{-2.5mm}
+\section{EXPERIENCE}
+
+{\customcventry{May 2019 - Apr 2020}
+{EllisDon}{FullStack Developer}{Mississauga, ON}{}
+{\begin{itemize}
+  \item Developed and maintained services that interact with a database, using Spring boot (Java),\newline Express (NodeJS), NestJS (TypeScript) and Mongodb
+  \item Setup Google Analytics to track user engagement on a website
+  \item Implemented interactive tutorials to facilitate user onboarding processes using React and Sass
+  \item Used TypeScript to Develop a service that uses React on the server-side to declaratively generate PDFs of existing front end applications to provide users with an offline way of viewing the site's content
+\end{itemize}
+}
+{\customcventry{Sep 2018 - Mar 2019}
+{Sheridan College}{Web/Mobile Developer - Research Assistant}{Oakville, ON}{}
+{\begin{itemize}
+  \item Developed a system that collects data from multiple social media sites using Python and Flask
+  \item Developed a user interface to interact with the application using VueJs
+  \item Automated tasks using node and python
+\item Explored and implemented various natural language processing (NLP) concepts to analyze data retrieved from social media posts   
+\end{itemize}
+}
+
+
+
+
+{\customcventry{Jan 2018 - Aug 2018}
+{Canadian Imperial Bank of Commerce (CIBC)}{Application Dev (Co-op)}{Toronto, ON}{}
+{\begin{itemize}
+  \item Developed a reporting application that automates the generation of custom reports Using VueJs and
+Java
+\item Automated tasks using node and python
+\end{itemize}
+}
+{\customcventry{May 2017 - Sep 2017}{DCommons Corp}{Mobile App Developer}{Oakville, ON}{}
+{\begin{itemize}
+  \item Developed a Native cross platform (Android/IOS) health care application using Nativescript
+ \item Developed and implemented components that handle user authentication, communication with a remote database and interaction
+with many of the device's native APIs including but not limited to Notifications, Location,Calendar, Preferences and Camera
+ \item Used TypeScript , CSS and XML to create and implement user interface and app functionalities
+\end{itemize}
+}
+\vspace*{-1.5mm}
+
+\section{PROJECTS \& ACTIVITIES}
+\vspace*{-1mm}
+
+  {\begin{itemize}
+   \item  {\textbf{\href{https://github.com/PierreStephaneVoltaire/devblog}{Dev-Blog (github.com/PierreStephaneVoltaire/devblog)}}}
+   \begin{itemize}
+ 	  \item  Currently working on a developer-focused social platform.
+The project contains multiple micro frontends built with react, Angular, Vue and TypeScript.
+  \item The functionalities are handled by multiple microservices built using ASP.NET core(C\#), Springboot(Java) and TypeScript.
+   \item Data is persisted on RDS (Mysql) DynamoDB and S3.
+ \item The CI/CD aspects are being handled with Github's actions and terraform.
+ \item The user authentication and authorization is handled by AWS Cognito.
+ \item The project makes use of additional services from AWS such as Lightsail, Lambda, R53, CloudFront, Amplify, Lex and AWS API gateway. 
+     \end{itemize}
+
+  \end{itemize}
+  }
+}
+
+
+
+      
+}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                       
+\end{document}
+
+
