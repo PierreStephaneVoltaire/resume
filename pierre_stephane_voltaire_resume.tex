@@ -8,10 +8,11 @@
 \usepackage{tabularx}
 \usepackage{ragged2e}
 \usepackage{tabto}
-
+\newfontface\lserif{Liberation Serif}
 
 \usepackage[scale=0.9]{geometry}
 \usepackage{multicol}
+\usepackage{multirow}
 
 
 \usepackage{import}
@@ -68,104 +69,138 @@
 \vspace*{-20mm}
 \begin{center}
 \begin{tabular}{ c c c c }
- \faLinkedin\enspace \href{https://www.linkedin.com/in/pierre-st\%C3\%A9phane-voltaire}{P.S.Voltaire} & \faEnvelopeO\enspace psvoltaire96@gmail.com & \faGithub\enspace \href{https://github.com/PierreStephaneVoltaire}{PierreStephaneVoltaire} & \faMobile\enspace 905 616 0236\\  
+ \faLinkedin\enspace \href{https://www.linkedin.com/in/pierre-st\%C3\%A9phane-voltaire}{pierre-stephane-voltaire} & \faEnvelopeO\enspace psvoltaire96@gmail.com & \faGithub\enspace \href{https://github.com/PierreStephaneVoltaire}{PierreStephaneVoltaire} & \faMobile\enspace 905 616 0236\\  
 \end{tabular}
 \end{center}
 
 \section{SUMMARY}
 \vspace*{-1mm}
-
 {\begin{itemize}
-\item Recent graduate at Sheridan College
-\item Has a wide range of technical expertise and able to adapt to changing requirements and willing to learn new technologies to improve skills developed in class
+\item  Developer with +5 years of experience including DevOps
+\item Developed and maintained services in Java, Python, Golang, Typescript and Node
+\item Worked on frontend applications built with Angular, React and Vue.js.
+\item Hands-on experience with AWS
+% \item Has a wide range of technical expertise and able to adapt to changing requirements and willing to learn new technologies to improve skills developed in class
 
 \end{itemize}
 \vspace*{-2.5mm}
 
 \section{SKILLS}
 \vspace*{-5mm}
+    % \begin{itemize}
+% \begin{multicols}{2}
+% \item \textbf{MARKUP LANGUAGES}: HTML, XML, YAML \\
+% \item \textbf{DATABASES \& SERVICES}: Couchbase, FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch
 
-   \begin{multicols}{2}
-    \begin{itemize}
-      \item \textbf{MARKUP LANGUAGES}: HTML, XML 
-      \item \textbf{PROGRAMMING LANGUAGES}: Java,\newline C\#, TypeScript, JavaScript, Kotlin, Python, Rust
-      \item \textbf{FRAMEWORKS/LIBRARY}: Spring, Flask,\newline ASP.NET Core, Actix, VueJs, jQuery, Angular, ReactJs
+% \end{multicols}
+%     \end{itemize}
 
-    \item \textbf{MOBILE PLATFORMS \& framework}: Android, Nativescript, Ionic
-                     \item \textbf{VCS Tools \& SERVICES}: GitLab, GitHub, Git
-      \item \textbf{DATABASES \& SERVICES}: Couchbase,\newline FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch
-                       \item \textbf{CLOUD SERVICES}: AWS, Google Cloud Platform
-                       \item \textbf{AUTOMATION/BUILD TOOLS}: Docker, GitHub Actions, Docker-Compose, Gradle, Terraform
+\begin{multicols}{2}
+  \begin{itemize}
+    \item \textbf{MARKUP LANGUAGES}: HTML, XML, YAML \\ \vspace*{-3.5mm}
+    
+    \item \textbf{PROGRAMMING LANGUAGES}: Java,\space{C{\lserif\#}}
+    , TypeScript, JavaScript, Golang, Python, Bash, Rust, Powershell \\ \vspace*{-3.5mm}
+    \item \textbf{FRAMEWORKS/LIBRARY}: Spring, Flask, ASP.NET Core, Vue.js, jQuery, Angular, ReactJS \\ \vspace*{-3.5mm}
+    \item \textbf{DATABASES \& SERVICES}: Postgres, FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch \\ \vspace*{-3.5mm}                   
+    \item \textbf{VCS TOOLS \& SERVICES}: GitLab, GitHub, Git, SVN \\ \vspace*{-3.5mm}
+    
+    \item \textbf{CLOUD SERVICES}: AWS, Google Cloud Platform \\ \vspace*{-3.5mm}
+    
+    % \item \textbf{MOBILE}: Android, Nativescript, Ionic \\ \vspace*{-3.5mm}
+    %   \item \textbf{DATABASES \& SERVICES}: Postgres, FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch \\ \vspace*{-3.5mm}
+    \item \textbf{INFRASTRUCTURE AS CODE}: Terrafrom, Terragrunt, AWS CDK, Cloudformation \\ \vspace*{-3.5mm}
+    \item \textbf{CONTAINER ORCHESTRATION}: Docker Compose, ECS, Fargate, EKS, Kubernetes \\ \vspace*{-3.5mm}
+    
+    \item \textbf{CI/CD}: CodeDeploy, CodePipeline, CodeBuild, CircleCI, Github Actions, Gitlab CI \vspace*{-3.5mm}
+
+
+	%----------------------------------------------------------------------------------------
 
     \end{itemize}
-    \end{multicols}m
-\vspace*{-7mm}
+    \end{multicols}
+\vspace*{-6.5mm}
 
 \section{EDUCATION}
 \vspace*{-1mm}
 
 {\customcventry{Sep 2016 - Apr 2020}{Sheridan College}{Bachelor of Computer Science-Mobile Computing}{Oakville, ON}{}{}}
 
-{\customcventry{Sep 2014 – Aug 2016}{Sheridan College}{Computer Systems Technician – Software Engineering, Diploma}{Oakville, ON}{}{}}
+{\customcventry{Sep 2014 - Aug 2016}{Sheridan College}{Computer Systems Technician – Software Engineering, Diploma}{Oakville, ON}{}{}}
 \vspace*{-2.5mm}
 \section{EXPERIENCE}
-
+{\customcventry{Mar 2021 - Present}
+{MUFG Investor Services}{Associate, IT, DevOps Engineer}{Mississauga, ON}{}
+{\begin{itemize}
+\item Implemented infrastructure as code using Terraform, AWS CDK and Cloudformation
+\item Managed Jira and confluence permissions and access
+\item Debugged Java, Python and Dotnet applications
+\item Created and maintained fully automated CI/CD pipelines for unit testing code packaging and code deployment using Gitlab CI, code build. CodePipeline, CodeDeploy, Docker, Python, Bash and Powershell 
+\item Managed Gitlab and Github repositories and permissions.
+\item  Automated build and deployment using Jenkins to reduce human error and speed up production processes
+\item Managed deployments to ECS (EC2 and Fargate), creating clusters and building Docker images for legacy applications
+\end{itemize}
+}
+{\customcventry{Aug 2020 - Mar 2021}
+{Airborne App}{FullStack Developer}{Oakville, ON}{}
+{\begin{itemize}
+\item Developed features on existing Golang services that interact with multiple AWS services
+\item Implemented user facing components on the existing front-end application using React, TypeScript, SASS
+\item Migrated existing project from JavaScript to TypeScript and added SASS support
+\item Created CI pipelines using Github actions and Terraform to automatically lint and run unit tests on incoming pull requests and
+deploy applications
+\item Tested core functionalities of the app using jest and react-testing-library
+\end{itemize}
+}
 {\customcventry{May 2019 - Apr 2020}
 {EllisDon}{FullStack Developer}{Mississauga, ON}{}
 {\begin{itemize}
-  \item Developed and maintained services that interact with a database, using Spring boot (Java),\newline Express (NodeJS), NestJS (TypeScript) and Mongodb
-  \item Setup Google Analytics to track user engagement on a website
-  \item Implemented interactive tutorials to facilitate user onboarding processes using React and Sass
-  \item Used TypeScript to Develop a service that uses React on the server-side to declaratively generate PDFs of existing front end applications to provide users with an offline way of viewing the site's content
+\item Developed and maintained services that utilize various database technologies using Spring Boot (Java),
+Express (NodeJS), NestJS (TypeScript) and MongoDB
+\item Implemented interactive tutorials to facilitate user onboarding processes using React and Sass
+\item Used TypeScript to Develop a service that uses React on the server-side to declaratively generate PDFs of existing front end
+applications to provide users with an offline way of viewing the site’s content
 \end{itemize}
 }
-{\customcventry{Sep 2018 - Mar 2019}
-{Sheridan College}{Web/Mobile Developer - Research Assistant}{Oakville, ON}{}
-{\begin{itemize}
-  \item Developed a system that collects data from multiple social media sites using Python and Flask
-  \item Developed a user interface to interact with the application using VueJs
-  \item Automated tasks using node and python
-\item Explored and implemented various natural language processing (NLP) concepts to analyze data retrieved from social media posts   
-\end{itemize}
+% {\customcventry{Sep 2018 - Mar 2019}
+% {Sheridan College}{Web/Mobile Developer - Research Assistant}{Oakville, ON}{}
+% {\begin{itemize}
+%   \item Developed a system that collects data from multiple social media sites using Python and Flask
+%   \item Developed a user interface to interact with the application using Vue.js
+%   \item Automated tasks using Node and Python
+% \item Explored and implemented various natural language processing (NLP) concepts to analyze data retrieved from social media posts   
+% \end{itemize}
+% }
+
+% \makecvtitle
+% \vspace*{-20mm}
+% \begin{center}
+% \begin{tabular}{ c c c c }
+%  \faLinkedin\enspace \href{https://www.linkedin.com/in/pierre-st\%C3\%A9phane-voltaire}{P.S.Voltaire} & \faEnvelopeO\enspace psvoltaire96@gmail.com & \faGithub\enspace \href{https://github.com/PierreStephaneVoltaire}{PierreStephaneVoltaire} & \faMobile\enspace 905 616 0236\\  
+% \end{tabular}
+% \end{center}
+
+% \vspace*{-3.5mm}
+% \section{EXPERIENCE CONTINUED}
+
+% {\customcventry{Jan 2018 - Aug 2018}
+% {Canadian Imperial Bank of Commerce (CIBC)}{Application Dev (Co-op)}{Toronto, ON}{}
+% {\begin{itemize}
+%   \item Developed a reporting application that automates the generation of custom reports Using Vue.js and
+% Java
+% \item Automated tasks using Node and Python
+% \end{itemize}
+% }
+% {\customcventry{May 2017 - Sep 2017}{DCommons Corp}{Mobile App Developer}{Oakville, ON}{}
+% {\begin{itemize}
+%   \item Developed a Native cross platform (Android/IOS) health care application using Nativescript
+%  \item Developed and implemented components that handle user authentication, communication with a remote database and interaction
+% with many of the device's native APIs including but not limited to Notifications, Location,Calendar, Preferences and Camera
+%  \item Used TypeScript , CSS and XML to create and implement user interface and app functionalities
+% \end{itemize}
 }
+% \vspace*{-1.5mm}
 
-
-
-
-{\customcventry{Jan 2018 - Aug 2018}
-{Canadian Imperial Bank of Commerce (CIBC)}{Application Dev (Co-op)}{Toronto, ON}{}
-{\begin{itemize}
-  \item Developed a reporting application that automates the generation of custom reports Using VueJs and
-Java
-\item Automated tasks using node and python
-\end{itemize}
-}
-{\customcventry{May 2017 - Sep 2017}{DCommons Corp}{Mobile App Developer}{Oakville, ON}{}
-{\begin{itemize}
-  \item Developed a Native cross platform (Android/IOS) health care application using Nativescript
- \item Developed and implemented components that handle user authentication, communication with a remote database and interaction
-with many of the device's native APIs including but not limited to Notifications, Location,Calendar, Preferences and Camera
- \item Used TypeScript , CSS and XML to create and implement user interface and app functionalities
-\end{itemize}
-}
-\vspace*{-1.5mm}
-
-\section{PROJECTS \& ACTIVITIES}
-\vspace*{-1mm}
-
-  {\begin{itemize}
-   \item  {\textbf{\href{https://github.com/PierreStephaneVoltaire/devblog}{Dev-Blog (github.com/PierreStephaneVoltaire/devblog)}}}
-   \begin{itemize}
- 	  \item  Currently working on a developer-focused social platform.
-The project contains multiple micro frontends built with react, Angular, Vue and TypeScript.
-  \item The functionalities are handled by multiple microservices built using ASP.NET core(C\#), Springboot(Java) and TypeScript.
-   \item Data is persisted on RDS (Mysql) DynamoDB and S3.
- \item The CI/CD aspects are being handled with Github's actions and terraform.
- \item The user authentication and authorization is handled by AWS Cognito.
- \item The project makes use of additional services from AWS such as Lightsail, Lambda, R53, CloudFront, Amplify, Lex and AWS API gateway. 
-     \end{itemize}
-
-  \end{itemize}
   }
 }
 
