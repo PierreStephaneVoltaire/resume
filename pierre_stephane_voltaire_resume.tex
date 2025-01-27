@@ -1,217 +1,236 @@
-\documentclass[10pt,a4paper,roman]{moderncv}
-\moderncvstyle{banking}                        
-\moderncvcolor{blue}                             
-\nopagenumbers{}                                 
+\documentclass[letterpaper,11.9pt,arimo]{article}[leftmargin=*]
+\usepackage{fmtcount}
+\usepackage[empty]{fullpage}
+\usepackage{enumitem}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{hyperref}
 \usepackage{fontawesome}
-\usepackage{fontspec}
+\usepackage[sfdefault,light]{times}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
 \usepackage{tabularx}
-\usepackage{ragged2e}
-\usepackage{tabto}
-\newfontface\lserif{Liberation Serif}
-
-\usepackage[scale=0.9]{geometry}
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\def \fullname {Pierre-Stéphane Voltaire}
+\def \subtitle {}
+\def \linkedinicon {\faLinkedin}
+\def \linkedinlink {https://linkedin.com/in/pierre-stephane-voltaire/}
+\def \linkedintext {/pierre-stephane-voltaire}
+\def \phoneicon {\faPhone}
+\def \phonetext {+1 (905)-616-0236}
+\def \emailicon {\faEnvelope}
+\def \emaillink {mailto:psvoltaire96@gmail.com}
+\def \emailtext {psvoltaire96@gmail.com}
+\def \GitHubicon {\faGithub}
+\def \GitHublink {https://GitHub.com/PierreStephaneVoltaire}
+\def \GitHubtext {/PierreStephaneVoltaire}
+\def \headertype {\doublecol}
+\def \entryspacing {-2pt}
+\def \bulletstyle {\faAngleRight}
+\definecolor{primary}{HTML}{000000}
+\definecolor{secondary}{HTML}{0D47A1}
+\definecolor{accent}{HTML}{263238}
+\definecolor{links}{HTML}{1565C0}
 
 
-\usepackage{import}
+\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
+\def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
+\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
+\def \GitHub {\GitHubicon \hspace{3pt}\href{\GitHublink}{\GitHubtext}}
+\def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
 
 
-\name{Pierre-Stéphane}{Voltaire}
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1in}
 
-\address{Oakville Ontario}{}{} 
-  
-\newcommand*{\customcventry}[7][.15em]{
-  \begin{tabular}{@{}l} 
-    {\bfseries #4}
-  \end{tabular}
-  \hfill
-  \begin{tabular}{l@{}}
-     {\bfseries #5}
-  \end{tabular} \\
-  \begin{tabular}{@{}l} 
-    {\itshape #3}
-  \end{tabular}
-  \hfill
-  \begin{tabular}{l@{}}
-     {\itshape #2}
-  \end{tabular}
-  \ifx&#7&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#7%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=links,
+}
 
-\newcommand*{\customcvproject}[4][.15em]{
-  \begin{tabular}{@{}l} 
-    {\bfseries #2}
-  \end{tabular}
-  \hfill% move it to the right
-  \begin{tabular}{l@{}}
-     {\itshape #3}
-  \end{tabular}
-  \ifx&#4&%
-  \else{\\%
-    \begin{minipage}{\maincolumnwidth}%
-      \small#4%
-    \end{minipage}}\fi%
-  \par\addvspace{#1}}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\setlength{\tabcolsep}{10pt}
+\renewcommand{\section}[2]{\vspace{5pt}
+\colorbox{secondary}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{7pt}#2}}}
+}
+\newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
+\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=4.5mm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\renewcommand{\labelitemii}{\bulletstyle}
+\newcommand{\resumeItem}[1]{
+    \item\small{
+            {#1 \vspace{-3pt}}
+    }
+}
+\newcommand{\resumeEntryTSDL}[4]{
+    \vspace{-1pt}\item[]
+    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
+    \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+    \textbf{\color{accent}\small#3} & \textbf{\color{accent}\small#4} \\
+    \end{tabularx}\vspace{-6pt}
+}
+\newcommand{\resumeEntryTD}[2]{
+    \vspace{-1pt}\item[]
+    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
+    \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+    \end{tabularx}\vspace{-6pt}
+}
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+\newcommand{\resumeEntryS}[2]{
+    \item[]\small{
+        \textbf{\color{primary}#1 }{ #2}
+    }
+}
+\newcommand{\boldsize}[1]{\fontsize{10}{15}\selectfont\color{secondary}\textbf{#1}}
+\newcommand{\doublecol}[6]{
+    \begin{tabularx}{\textwidth}{Xr}
+    {
+        \begin{tabular}[c]{l}
+        \fontsize{20}{15}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}}
+        \end{tabular}
+    } & {
+        \begin{tabular}[c]{l@{\hspace{1.5em}}l}
+        {\small#4} & {\small#1} \\
+        {\small#5} & {\small#2} \\
+        {\small#6} & {\small#3}
+        \end{tabular}
+    }
+    \end{tabularx}
+}
+\newcommand{\singlecol}[6]{
+    \begin{tabularx}{\textwidth}{Xr}
+    {
+        \begin{tabular}[b]{l}
+        \fontsize{15}{25}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}}
+        \end{tabular}
+    } & {
+        \begin{tabular}[c]{l}
+        {\small#1} \\
+        {\small#2} \\
+        {\small#3} \\
+        {\small#4} \\
+        {\small#5} \\
+        {\small#6}
+        \end{tabular}
+    }
+    \end{tabularx}
+}
+
 \begin{document}
-\makecvtitle
-\vspace*{-20mm}
-\begin{center}
-\begin{tabular}{ c c c c }
- \faLinkedin\enspace \href{https://www.linkedin.com/in/pierre-st\%C3\%A9phane-voltaire}{pierre-stephane-voltaire} & \faEnvelopeO\enspace psvoltaire96@gmail.com & \faGithub\enspace \href{https://github.com/PierreStephaneVoltaire}{PierreStephaneVoltaire} & \faMobile\enspace 905 616 0236\\  
-\end{tabular}
-\end{center}
-
-\section{SUMMARY}
-\vspace*{-1mm}
-{\begin{itemize}
-\item  Developer with +5 years of experience including DevOps
-\item Developed and maintained services in Java, Python, Golang, Typescript and Node
-\item Worked on frontend applications built with Angular, React and Vue.js.
-\item Hands-on experience with AWS
-% \item Has a wide range of technical expertise and able to adapt to changing requirements and willing to learn new technologies to improve skills developed in class
-
-\end{itemize}
-\vspace*{-2.5mm}
-
-\section{SKILLS}
-\vspace*{-5mm}
-    % \begin{itemize}
-% \begin{multicols}{2}
-% \item \textbf{MARKUP LANGUAGES}: HTML, XML, YAML \\
-% \item \textbf{DATABASES \& SERVICES}: Couchbase, FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch
-
-% \end{multicols}
-%     \end{itemize}
-
-\begin{multicols}{2}
-  \begin{itemize}
-    \item \textbf{MARKUP LANGUAGES}: HTML, XML, YAML \\ \vspace*{-3.5mm}
-    
-    \item \textbf{PROGRAMMING LANGUAGES}: Java,\space{C{\lserif\#}}
-    , TypeScript, JavaScript, Golang, Python, Bash, Rust, Powershell \\ \vspace*{-3.5mm}
-    \item \textbf{FRAMEWORKS/LIBRARY}: Spring, Flask, ASP.NET Core, Vue.js, jQuery, Angular, ReactJS \\ \vspace*{-3.5mm}
-    \item \textbf{DATABASES \& SERVICES}: Postgres, FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch \\ \vspace*{-3.5mm}                   
-    \item \textbf{VCS TOOLS \& SERVICES}: GitLab, GitHub, Git, SVN \\ \vspace*{-3.5mm}
-    
-    \item \textbf{CLOUD SERVICES}: AWS, Google Cloud Platform \\ \vspace*{-3.5mm}
-    
-    % \item \textbf{MOBILE}: Android, Nativescript, Ionic \\ \vspace*{-3.5mm}
-    %   \item \textbf{DATABASES \& SERVICES}: Postgres, FireBase, SQLite, MongoDB, MSSQL, MySQL, ElasticSearch \\ \vspace*{-3.5mm}
-    \item \textbf{INFRASTRUCTURE AS CODE}: Terrafrom, Terragrunt, AWS CDK, Cloudformation \\ \vspace*{-3.5mm}
-    \item \textbf{CONTAINER ORCHESTRATION}: Docker Compose, ECS, Fargate, EKS, Kubernetes \\ \vspace*{-3.5mm}
-    
-    \item \textbf{CI/CD}: CodeDeploy, CodePipeline, CodeBuild, CircleCI, Github Actions, Gitlab CI \vspace*{-3.5mm}
+    \headertype{\linkedin}{\GitHub}{\website}{\phone}{\email}{}
+    \vspace{-6pt}
+%-------------------------------------------------- SUMMARY --------------------------------------------------
 
 
-	%----------------------------------------------------------------------------------------
+    \section{\faListAlt}{Summary}
 
-    \end{itemize}
+    \resumeEntryStart
+    \resumeItemListStart
+    \resumeItem{6+ years of experience in continuous integration and continuous deployment, Automation using infrastructure as code tools, system administration, and application development }
+    \resumeItem {Experienced with container-based build infrastructures}
+    \resumeItem {Developed and maintained Java, Python, Golang, TypeScript, and Node.js services.}
+    \resumeItem {Hands-on experience with AWS and currently learning Azure}
+    \resumeItemListEnd
+    \resumeEntryEnd
+%-------------------------------------------------- SKILLS --------------------------------------------------
+
+
+    \section{\faGears}{Skills}
+    \begin{multicols}{3}
+
+        \resumeEntryStart
+
+        \resumeEntryS{PROGRAMMING LANGUAGES: } {Java,
+            TypeScript, JavaScript, Golang, Python, Bash, Powershell}
+        % \resumeEntryS{MARKUP LANGUAGES: } {HTML, XML, YAML}
+        \resumeEntryS{CONTAINER ORCHESTRATION:} {Docker Compose, Helm,
+            ECS, Fargate, Kubernetes\hspace{35}}
+        \resumeEntryS{DATABASES \& SERVICES:} {PostgreSQL, DynamoDB, SQLite, MongoDB, MySQL, ElasticSearch}
+        \resumeEntryS{FRAMEWORKS/LIBRARY: } {Spring Boot, Flask, Gin, Vue.js, Angular, ReactJS \hspace{35}}
+        \resumeEntryS{INFRASTRUCTURE AS CODE: } {Terraform, Terragrunt, AWS CDK, Cloudformation}
+
+        \resumeEntryS{CI/CD:}  {CodeDeploy, CodePipeline, CodeBuild, CircleCI, GitHub Actions, Jenkins, GitLab CI}
+
+        \resumeEntryEnd
     \end{multicols}
-\vspace*{-6.5mm}
-
-\section{EDUCATION}
-\vspace*{-1mm}
-
-{\customcventry{Sep 2016 - Apr 2020}{Sheridan College}{Bachelor of Computer Science-Mobile Computing}{Oakville, ON}{}{}}
-
-{\customcventry{Sep 2014 - Aug 2016}{Sheridan College}{Computer Systems Technician – Software Engineering, Diploma}{Oakville, ON}{}{}}
-\vspace*{-2.5mm}
-\section{EXPERIENCE}
-{\customcventry{Mar 2021 - Present}
-{MUFG Investor Services}{Associate, IT, DevOps Engineer}{Mississauga, ON}{}
-{\begin{itemize}
-\item Implemented infrastructure as code using Terraform, AWS CDK and Cloudformation
-\item Managed Jira and confluence permissions and access
-\item Debugged Java, Python and Dotnet applications
-\item Created and maintained fully automated CI/CD pipelines for unit testing code packaging and code deployment using Gitlab CI, code build. CodePipeline, CodeDeploy, Docker, Python, Bash and Powershell 
-\item Managed Gitlab and Github repositories and permissions.
-\item  Automated build and deployment using Jenkins to reduce human error and speed up production processes
-\item Managed deployments to ECS (EC2 and Fargate), creating clusters and building Docker images for legacy applications
-\end{itemize}
-}
-{\customcventry{Aug 2020 - Mar 2021}
-{Airborne App}{FullStack Developer}{Oakville, ON}{}
-{\begin{itemize}
-\item Developed features on existing Golang services that interact with multiple AWS services
-\item Implemented user facing components on the existing front-end application using React, TypeScript, SASS
-\item Migrated existing project from JavaScript to TypeScript and added SASS support
-\item Created CI pipelines using Github actions and Terraform to automatically lint and run unit tests on incoming pull requests and
-deploy applications
-\item Tested core functionalities of the app using jest and react-testing-library
-\end{itemize}
-}
-{\customcventry{May 2019 - Apr 2020}
-{EllisDon}{FullStack Developer}{Mississauga, ON}{}
-{\begin{itemize}
-\item Developed and maintained services that utilize various database technologies using Spring Boot (Java),
-Express (NodeJS), NestJS (TypeScript) and MongoDB
-\item Implemented interactive tutorials to facilitate user onboarding processes using React and Sass
-\item Used TypeScript to Develop a service that uses React on the server-side to declaratively generate PDFs of existing front end
-applications to provide users with an offline way of viewing the site’s content
-\end{itemize}
-}
-% {\customcventry{Sep 2018 - Mar 2019}
-% {Sheridan College}{Web/Mobile Developer - Research Assistant}{Oakville, ON}{}
-% {\begin{itemize}
-%   \item Developed a system that collects data from multiple social media sites using Python and Flask
-%   \item Developed a user interface to interact with the application using Vue.js
-%   \item Automated tasks using Node and Python
-% \item Explored and implemented various natural language processing (NLP) concepts to analyze data retrieved from social media posts   
-% \end{itemize}
-% }
-
-% \makecvtitle
-% \vspace*{-20mm}
-% \begin{center}
-% \begin{tabular}{ c c c c }
-%  \faLinkedin\enspace \href{https://www.linkedin.com/in/pierre-st\%C3\%A9phane-voltaire}{P.S.Voltaire} & \faEnvelopeO\enspace psvoltaire96@gmail.com & \faGithub\enspace \href{https://github.com/PierreStephaneVoltaire}{PierreStephaneVoltaire} & \faMobile\enspace 905 616 0236\\  
-% \end{tabular}
-% \end{center}
-
-% \vspace*{-3.5mm}
-% \section{EXPERIENCE CONTINUED}
-
-% {\customcventry{Jan 2018 - Aug 2018}
-% {Canadian Imperial Bank of Commerce (CIBC)}{Application Dev (Co-op)}{Toronto, ON}{}
-% {\begin{itemize}
-%   \item Developed a reporting application that automates the generation of custom reports Using Vue.js and
-% Java
-% \item Automated tasks using Node and Python
-% \end{itemize}
-% }
-% {\customcventry{May 2017 - Sep 2017}{DCommons Corp}{Mobile App Developer}{Oakville, ON}{}
-% {\begin{itemize}
-%   \item Developed a Native cross platform (Android/IOS) health care application using Nativescript
-%  \item Developed and implemented components that handle user authentication, communication with a remote database and interaction
-% with many of the device's native APIs including but not limited to Notifications, Location,Calendar, Preferences and Camera
-%  \item Used TypeScript , CSS and XML to create and implement user interface and app functionalities
-% \end{itemize}
-}
-% \vspace*{-1.5mm}
-
-  }
-}
+    \vspace{-12pt}
+%-------------------------------------------------- EXPERIENCE --------------------------------------------------
 
 
+    \section{\faPieChart}{Experience}
 
-      
-}
+    \resumeEntryStart
+    \resumeEntryTSDL
+    {Mitsubishi UFJ Financial Group (MUFG) Investor Service}{Mar \text{2021} - Present}
+    {\boldsize{Senior Associate, IT, Platform Engineer}}{Toronto, ON}
+    \resumeItemListStart
+    \resumeItem{Implemented and managed automated CI/CD pipelines, drastically cutting production deployment time from 20 man hours to 15 minutes using GitLab CI, CodeDeploy, Python, bash and Powershell}
+    \resumeItem {Streamlined production deployment and increased secure secret and application configuration injections by implementing automated build and deployment processes using Jenkins and Python/Node.js Lambda functions within 12 months.}
+    \resumeItem {Implemented effective debugging techniques for Java, Python, and Dotnet applications, playing a key role in restoring critical systems and preventing future outages.}
+    \resumeItem {Developed new environments for greenfield applications using Cloudformation, Terraform and AWS CDK within 6 months}
+    \resumeItem {Enhanced cloud-native application monitoring by integrating Datadog Application Performance Management (APM), improving performance visibility and enabling faster troubleshooting.}
+    \resumeItem  {Migrated 6 legacy Maven and Dotnet applications to AWS within 2 years, provisioning cloud native resources, optimizing system performance and automating build, test, and deployment processes}
 
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                       
+    \resumeItemListEnd
+    \resumeEntryEnd
+
+    \resumeEntryStart
+    \resumeEntryTSDL
+    {Airborne App}{Aug \text{2020} - Mar \text{2021}}
+    {\boldsize{FullStack Developer}}{Oakville, ON}
+    \resumeItemListStart
+    \resumeItem{ Developed features on existing Golang services that interact with multiple AWS services}
+    \resumeItem{ Integrated user-facing components on frontend apps with React, TypeScript, and SASS within 5 days, improving overall user experience and app performance}
+    \resumeItem{Developed CI pipelines leveraging GitHub Actions and Terraform to automatically lint, execute unit and integration tests for incoming pull requests, and reduce the introduction of bugs in production}
+    \resumeItem{Developed a dynamic testing environment pipeline using GitHub actions, terraform and S3, accelerating frontend validation processes and streamlining collaboration between developers, product owners, and designers within 6 months}
+    \resumeItemListEnd
+    \resumeEntryEnd
+
+    \resumeEntryStart
+    \resumeEntryTSDL
+    {EllisDon}{May \text{2019} - Apr \text{2020}}
+    {\boldsize{FullStack Developer}}{Mississauga, ON}
+    \resumeItemListStart
+    \resumeItem{Developed and maintained services using ReactJS, Spring Boot (Java), Express (Node.js), NestJS (TypeScript), and MongoDB. Ensured seamless feature integration, bug resolution, and codebase enhancements for improved maintainability.}
+    \resumeItem{Optimized project maintainability through automated CI pipelines for unit testing and code linting}
+    \resumeItem{ Implemented tests using Junit and Jest to boost code coverage and enhanced code quality in frontend and backend applications.}
+    \resumeItemListEnd
+    \resumeEntryEnd
+    \resumeEntryStart
+    \resumeEntryTSDL
+    {Sheridan College Research}{Sep \text{2018} - Mar \text{2019}}
+    {\boldsize{Mobile Web Developer}}{Oakville, ON}
+    \resumeItemListStart
+    \resumeItem{Developed a data aggregation feature using Vue.js, Python, and Flask to streamline data analysis from 3rd party APIs and website content.}
+    \resumeItem{Implemented NLP algorithms to extract insights from social media data.}
+    \resumeItem{Provisioned databases and virtual machines in DigitalOcean to host applications, reducing the developers-stakeholders feedback loop}
+
+    \resumeItemListEnd
+    \resumeEntryEnd
+%-------------------------------------------------- EDUCATION --------------------------------------------------
+
+
+    \section{\faGraduationCap}{Education}
+
+    \resumeEntryStart
+    \resumeEntryTSDL
+    {Sheridan College}{Sep \text{2016} - Apr \text{2020}}
+    {Bachelor of Computer Science - Mobile Computing}{Oakville, ON}
+    \resumeEntryTSDL
+    {Sheridan College}{Sep \text{2014} - Aug \text{2016}}
+    {Computer Systems Technician – Software Engineering, Diploma}{Oakville, ON}
+
+    \resumeEntryEnd
+
 \end{document}
-
-
